@@ -162,6 +162,41 @@
     .support-desc { font-size: 13px; color: var(--text2); margin-bottom: 12px; }
     .support-price { font-size: 20px; font-weight: 900; color: var(--brand); }
 
+    /* 理念 */
+    .philosophy { padding: 80px 5%; background: linear-gradient(180deg, #fff 0%, var(--light) 100%); }
+    .philosophy-why {
+      max-width: 760px; margin: 0 auto 64px; text-align: center;
+    }
+    .philosophy-why p { font-size: 15px; color: var(--text); line-height: 2; margin-bottom: 4px; }
+    .philosophy-message {
+      max-width: 760px; margin: 0 auto 64px; text-align: center;
+      background: var(--dark); color: #fff; border-radius: 20px; padding: 48px 32px;
+    }
+    .philosophy-message .label { font-size: 12px; letter-spacing: .2em; color: #ffd6f0; font-weight: 700; margin-bottom: 16px; }
+    .philosophy-message h3 { font-size: clamp(20px, 4vw, 30px); font-weight: 900; line-height: 1.6; margin-bottom: 16px; }
+    .philosophy-message p { font-size: 14px; color: rgba(255,255,255,.75); }
+    .vmi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 960px; margin: 0 auto 64px; }
+    .vmi-card {
+      background: #fff; border-radius: 16px; padding: 32px 26px; box-shadow: 0 4px 20px rgba(165,30,109,.08);
+      border-top: 4px solid var(--brand);
+    }
+    .vmi-card .vmi-label { font-size: 12px; font-weight: 700; color: var(--brand); letter-spacing: .1em; margin-bottom: 10px; }
+    .vmi-card h3 { font-size: 17px; font-weight: 900; color: var(--dark); margin-bottom: 12px; }
+    .vmi-card p { font-size: 14px; color: var(--text2); line-height: 1.85; }
+    .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; max-width: 1000px; margin: 0 auto 56px; }
+    .value-card { background: #fff; border-radius: 14px; padding: 24px 20px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+    .value-card .value-num {
+      width: 40px; height: 40px; margin: 0 auto 12px; border-radius: 50%; background: var(--light); color: var(--brand);
+      font-weight: 900; font-size: 16px; display: flex; align-items: center; justify-content: center;
+    }
+    .value-card h4 { font-size: 15px; font-weight: 900; color: var(--dark); margin-bottom: 8px; }
+    .value-card p { font-size: 13px; color: var(--text2); line-height: 1.7; }
+    .philosophy-future {
+      max-width: 760px; margin: 0 auto; text-align: center; background: var(--light); border-radius: 20px; padding: 40px 32px;
+    }
+    .philosophy-future p { font-size: 15px; color: var(--text); line-height: 2.1; }
+    .philosophy-future strong { color: var(--brand); }
+
     /* プロフィール */
     .profile { padding: 80px 5%; }
     .profile-inner {
@@ -228,6 +263,7 @@
   <div class="nav-links">
     <a href="#pain">課題</a>
     <a href="#solution">自動化の流れ</a>
+    <a href="#philosophy">理念</a>
     <a href="#pricing">料金</a>
     <a href="#profile">プロフィール</a>
   </div>
@@ -407,6 +443,82 @@
       <div class="support-desc">不具合対応＋月1回訪問＋研修指導会（年2回）</div>
       <div class="support-price">5万円／月</div>
     </div>
+  </div>
+</section>
+
+<!-- 理念 -->
+<section class="philosophy" id="philosophy">
+  <div class="section-label">PHILOSOPHY</div>
+  <h2 class="section-title">私たちの<span>理念</span></h2>
+  <p class="section-desc">なぜAIを届けるのか、その原点</p>
+
+  <div class="philosophy-why">
+    <p>私は、大きな病を経験したことで、「今日、生きていること」は決して当たり前ではないと実感しました。</p>
+    <p>こうして生きていること。支えてくれる人がいること。必要なものに恵まれ、毎日の生活を送れること。</p>
+    <p>その一つひとつが、本当にありがたいことだと感じています。</p>
+    <p>だからこそ、限りある人生を、「もう歳だから」「時間がないから」「お金がないから」という理由だけで諦めてほしくありません。</p>
+    <p>AIは、人の代わりになるためだけのものではなく、仕事の負担を減らし、時間を生み出し、新しい可能性を広げ、人が本当に大切にしたいことへ時間を使えるようにするための力だと考えています。</p>
+  </div>
+
+  <div class="philosophy-message">
+    <div class="label">BRAND MESSAGE</div>
+    <h3>いくつになっても、人生はここから。</h3>
+    <p>AIで時間と可能性を生み出し、新しい一歩を踏み出す人を増やしていく。</p>
+  </div>
+
+  <div class="vmi-grid">
+    <div class="vmi-card">
+      <div class="vmi-label">VISION</div>
+      <h3>実現したい未来</h3>
+      <p>誰もがAIを使いこなし、時間的・経済的な自由を手に入れ、年齢に関係なく新しいことに挑戦し、毎日を生き生きと楽しく暮らせる社会をつくる。</p>
+    </div>
+    <div class="vmi-card">
+      <div class="vmi-label">MISSION</div>
+      <h3>私たちの使命</h3>
+      <p>AIを難しいものではなく誰でも使える身近な力として届け、地域の企業や働く人に寄り添い、仕事のムダや負担を減らして時間と新しい可能性を生み出す。</p>
+    </div>
+    <div class="vmi-card">
+      <div class="vmi-label">IDENTITY</div>
+      <h3>私たちは何者か</h3>
+      <p>AIを通じて人と企業が持つ可能性を引き出し、新しい一歩に寄り添う「地域の伴走者」。難しい技術を売るのではなく、一緒に考え、一緒につくります。</p>
+    </div>
+  </div>
+
+  <div class="value-grid">
+    <div class="value-card">
+      <div class="value-num">1</div>
+      <h4>感謝</h4>
+      <p>今日生きていること、人との出会い、支えてもらえることを当たり前と思わない。</p>
+    </div>
+    <div class="value-card">
+      <div class="value-num">2</div>
+      <h4>挑戦</h4>
+      <p>年齢や経験に関係なく、「やってみたい」という気持ちを大切にする。</p>
+    </div>
+    <div class="value-card">
+      <div class="value-num">3</div>
+      <h4>伴走</h4>
+      <p>答えを一方的に押しつけず、一緒に考え、一緒に進む。</p>
+    </div>
+    <div class="value-card">
+      <div class="value-num">4</div>
+      <h4>わかりやすさ</h4>
+      <p>AIを専門家だけのものにせず、誰でも理解し使える形にする。</p>
+    </div>
+    <div class="value-card">
+      <div class="value-num">5</div>
+      <h4>人を中心に考える</h4>
+      <p>AI導入そのものを目的にせず、その先にいる人の時間・笑顔・成長・豊かさを大切にする。</p>
+    </div>
+  </div>
+
+  <div class="philosophy-future">
+    <p>
+      宮崎の中小企業が、人手不足や事務作業に追われるのではなく、AIを身近なパートナーとして活用している。<br>
+      経営者は本来向き合うべき経営や未来づくりに、働く人は人にしかできない仕事や新しい挑戦に時間を使える。<br>
+      若い人もシニア世代も、年齢に関係なく<strong>「まだできる」「やってみよう」「毎日が楽しい」</strong>と思える。<br>
+      そんな地域社会を、宮崎からつくっていきます。
+    </p>
   </div>
 </section>
 
