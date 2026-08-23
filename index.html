@@ -7,6 +7,29 @@
   <meta name="description" content="運輸・警備会社の日報→給与計算→請求書→売上集計を一気通貫で自動化。元現場責任者の生成AI研修講師・AIエージェントコンサルタント 榎木茂｜宮崎・都城">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "AIビジネスサポート宮崎",
+    "description": "運輸・警備会社の日報→給与計算→請求書→売上集計を一気通貫で自動化。元現場責任者の生成AI研修講師・AIエージェントコンサルタント。",
+    "url": "SITE_URL",
+    "telephone": "+81-80-4039-1726",
+    "email": "exel1726e@yahoo.co.jp",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "都城市高城町",
+      "addressRegion": "宮崎県",
+      "addressCountry": "JP"
+    },
+    "areaServed": ["宮崎県", "都城市", "宮崎市"],
+    "priceRange": "¥¥",
+    "founder": {
+      "@type": "Person",
+      "name": "榎木茂"
+    }
+  }
+  </script>
   <style>
     :root {
       --brand: #a51e6d;
@@ -252,6 +275,22 @@
       .phase-item:not(:last-child)::after { display: none; }
       .profile-inner { grid-template-columns: 1fr; }
       .profile-img-box { max-width: 160px; }
+      body { padding-bottom: 64px; }
+    }
+
+    /* スマホ用 追従フッターバー */
+    .mobile-bar { display: none; }
+    @media (max-width: 640px) {
+      .mobile-bar {
+        display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+        box-shadow: 0 -2px 12px rgba(0,0,0,.15);
+      }
+      .mobile-bar a {
+        flex: 1; text-align: center; padding: 14px 8px; font-size: 14px; font-weight: 700;
+        color: #fff; text-decoration: none;
+      }
+      .mobile-bar .bar-call { background: var(--brand); }
+      .mobile-bar .bar-line { background: #06C755; }
     }
   </style>
 </head>
@@ -282,7 +321,8 @@
     <span class="hero-badge">初回相談 無料</span>
   </div>
   <div class="hero-btns">
-    <a href="#cta" class="btn-primary">無料相談（30分）を予約する</a>
+    <a href="tel:08040391726" class="btn-primary">📞 今すぐ電話で相談する</a>
+    <a href="LINE_FRIEND_URL" class="btn-secondary" style="background:#06C755;border-color:#06C755;">LINEで相談する</a>
     <a href="#solution" class="btn-secondary">自動化の流れを見る</a>
   </div>
 </section>
@@ -594,23 +634,33 @@
   <div class="cta-contact">
     <div class="cta-item">
       <span class="label">電話</span>
-      <span class="value">080-4039-1726</span>
+      <a class="value" href="tel:08040391726" style="color:#fff;text-decoration:underline;">080-4039-1726</a>
     </div>
     <div class="cta-item">
       <span class="label">メール</span>
-      <span class="value">exel1726e@yahoo.co.jp</span>
+      <a class="value" href="mailto:exel1726e@yahoo.co.jp" style="color:#fff;text-decoration:underline;">exel1726e@yahoo.co.jp</a>
     </div>
     <div class="cta-item">
       <span class="label">所在地</span>
       <span class="value">宮崎県都城市高城町</span>
     </div>
   </div>
-  <a href="mailto:exel1726e@yahoo.co.jp" class="btn-primary" style="display:inline-block;">メールで相談する（無料）</a>
+  <div class="hero-btns" style="justify-content:center;">
+    <a href="tel:08040391726" class="btn-primary">📞 電話で相談する（無料）</a>
+    <a href="LINE_FRIEND_URL" class="btn-secondary" style="background:#06C755;border-color:#06C755;">LINEで相談する（無料）</a>
+    <a href="mailto:exel1726e@yahoo.co.jp" class="btn-secondary">メールで相談する（無料）</a>
+  </div>
 </section>
 
 <footer>
   <p>© 2026 AIビジネスサポート宮崎　榎木茂｜生成AI研修講師・AIエージェントコンサルタント</p>
 </footer>
+
+<!-- スマホ用 追従フッターバー -->
+<div class="mobile-bar">
+  <a href="tel:08040391726" class="bar-call">📞 電話で相談</a>
+  <a href="LINE_FRIEND_URL" class="bar-line">LINEで相談</a>
+</div>
 
 </body>
 </html>
