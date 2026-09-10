@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「AIって何から始めればいい？」を、未来から逆算して考える｜未来逆算コラム</title>
+  <meta name="description" content="何から手をつければいいかわからない——そんな悩みに、理想の未来から逆算する「未来逆算思考」で答えます。運輸・警備会社の現場経験者の視点で。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #1b7a4a;
+      --brand2: #4fae7e;
+      --light: #e6f4ec;
+      --dark: #1a1a2e;
+      --gray: #f5f5f7;
+      --text: #333;
+      --text2: #666;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); line-height: 1.8; background: #fff; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--brand);
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-weight: 900; font-size: 15px; color: var(--brand); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { text-decoration: none; color: var(--text2); font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--brand); }
+    .nav-cta {
+      background: var(--brand); color: #fff; padding: 10px 22px; border-radius: 999px;
+      text-decoration: none; font-size: 14px; font-weight: 700; transition: opacity .2s;
+    }
+    .nav-cta:hover { opacity: .85; }
+
+    article { max-width: 720px; margin: 0 auto; padding: 56px 5% 40px; }
+    .post-tag {
+      display: inline-block; background: var(--light); color: var(--brand);
+      font-size: 12px; font-weight: 700; letter-spacing: .05em; padding: 5px 14px; border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    .post-title { font-size: clamp(24px, 4.5vw, 34px); font-weight: 900; color: var(--dark); line-height: 1.5; margin-bottom: 14px; }
+    .post-meta { font-size: 13px; color: var(--text2); margin-bottom: 36px; }
+    .post-content p { font-size: 16px; color: var(--text); margin-bottom: 24px; }
+    .post-content h2 {
+      font-size: 20px; font-weight: 900; color: var(--dark); margin: 40px 0 16px;
+      border-left: 4px solid var(--brand); padding-left: 14px;
+    }
+    .post-content ul, .post-content ol { margin: 0 0 24px 20px; }
+    .post-content li { font-size: 15px; color: var(--text); margin-bottom: 8px; }
+    .callout {
+      background: var(--light); border-radius: 14px; padding: 24px 26px; margin: 32px 0;
+      font-size: 14.5px; color: var(--text);
+    }
+    .callout strong { color: var(--brand); }
+
+    .post-cta {
+      max-width: 720px; margin: 24px auto 0; padding: 0 5% 64px;
+    }
+    .post-cta-box {
+      background: linear-gradient(135deg, #1b7a4a, #0f4a2c); color: #fff;
+      border-radius: 16px; padding: 36px 28px; text-align: center;
+    }
+    .post-cta-box h3 { font-size: 18px; font-weight: 900; margin-bottom: 10px; }
+    .post-cta-box p { font-size: 13.5px; color: rgba(255,255,255,.8); margin-bottom: 20px; }
+    .btn-primary {
+      display: inline-block; background: #fff; color: var(--brand); padding: 13px 32px; border-radius: 999px;
+      font-size: 14px; font-weight: 900; text-decoration: none;
+    }
+    .back-link {
+      display: block; max-width: 720px; margin: 0 auto; padding: 0 5% 40px;
+      font-size: 13px; color: var(--brand); text-decoration: none;
+    }
+
+    footer {
+      background: var(--dark); color: rgba(255,255,255,.5); text-align: center;
+      padding: 24px 5%; font-size: 13px;
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../../index.html" class="nav-logo">AIビジネスサポート宮崎</a>
+  <div class="nav-links">
+    <a href="../../index.html#pain">課題</a>
+    <a href="../../index.html#solution">自動化の流れ</a>
+    <a href="../../index.html#pricing">料金</a>
+    <a href="../index.html" class="active">ブログ</a>
+  </div>
+  <a href="../../index.html#cta" class="nav-cta">無料相談する</a>
+</nav>
+
+<article>
+  <span class="post-tag">未来逆算思考</span>
+  <h1 class="post-title">「AIって何から始めればいい？」を、未来から逆算して考える</h1>
+  <p class="post-meta">2026.09.11｜AIビジネスサポート宮崎</p>
+
+  <div class="post-content">
+    <p>運輸会社・警備会社の経営者や事務担当の方から、いちばんよく聞かれる言葉があります。「AIとかITツールを使いたいのはやまやまだけど、何から手をつければいいかわからない」というものです。</p>
+
+    <p>この問いに、「今できること」から探して答えようとすると、いつまでも迷います。答えは、逆の順番——「理想の未来」を先に決め、そこから逆算する——で見えてきます。</p>
+
+    <h2>ステップ1：3年後の理想の現場を思い描く</h2>
+    <p>まず考えるのは「今何ができるか」ではなく「3年後、どんな現場になっていたいか」です。日報も給与も請求書も自動化されている必要はありません。「事務作業に追われず、本来の仕事に時間を使えている」——そのくらいの解像度で構いません。</p>
+
+    <h2>ステップ2：理想から今日まで逆算する</h2>
+    <p>理想の未来が決まったら、そこから時間を巻き戻します。「3年後にそうなっているには、1年後どうなっている必要があるか」「1年後にそうなっているには、今日何を始める必要があるか」。この順番で考えると、今日やるべきことは自然と1つに絞られます。</p>
+
+    <div class="callout">
+      <strong>逆算の考え方：</strong>3年後の理想 → 1年後の到達点 → 今日の一歩、の順に決める。いきなり「日報も給与も請求書も全部AIで」と大きく構えると、現場が慣れないうちに一気に変わり、かえって混乱し定着せずに終わります。逆算すれば、今日の一歩は自然と小さくなります。
+    </div>
+
+    <h2>ステップ3：逆算した「今日の一歩」を実行する</h2>
+    <ol>
+      <li><strong>いちばん時間を取られている作業を1つだけ選ぶ</strong>（多くの場合は日報の集計）</li>
+      <li><strong>その1つだけをデジタル化してみる</strong>（スマホ入力など、現場の負担が少ない形で）</li>
+      <li><strong>1〜2ヶ月使ってみて、現場の反応を見る</strong></li>
+      <li><strong>慣れてきたら、理想の未来に向けて次の作業（給与計算や請求書）に広げる</strong></li>
+    </ol>
+
+    <h2>「以前システムを入れたが定着しなかった」という方へ</h2>
+    <p>過去にツールを導入したものの使われなくなってしまった、というお話もよく伺います。多くの場合、原因は機能の良し悪しではなく、「理想の未来を共有せずに手段だけ導入してしまった」ことにあります。ゴールが現場に伝わっていないと、目の前の一歩の意味が分からず、定着しません。導入後も月1回の訪問や研修でフォローし、スタッフが「これ簡単！」と言えるようになるまで伴走する体制があるかどうかを、導入前に確認しておくと安心です。</p>
+  </div>
+</article>
+
+<a class="back-link" href="../index.html">← ブログ一覧に戻る</a>
+
+<div class="post-cta">
+  <div class="post-cta-box">
+    <h3>まずは現状を聞かせてください</h3>
+    <p>「うちの場合はどこから始めるのがいいか」を、無料相談（30分）でご提案します。</p>
+    <a href="../../index.html#cta" class="btn-primary">無料相談を申し込む</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 AIビジネスサポート宮崎　榎木茂｜生成AI研修講師・AIエージェントコンサルタント</p>
+</footer>
+
+</body>
+</html>

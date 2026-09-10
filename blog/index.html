@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>未来逆算コラム｜AIビジネスサポート宮崎</title>
+  <meta name="description" content="理想の未来から逆算して、今日からの業務改善の一歩を考えるコラムです。AIビジネスサポート宮崎 榎木茂｜宮崎・都城">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #1b7a4a;
+      --brand2: #4fae7e;
+      --light: #e6f4ec;
+      --dark: #1a1a2e;
+      --gray: #f5f5f7;
+      --text: #333;
+      --text2: #666;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); line-height: 1.8; background: var(--gray); }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--brand);
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-weight: 900; font-size: 15px; color: var(--brand); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { text-decoration: none; color: var(--text2); font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--brand); }
+    .nav-cta {
+      background: var(--brand); color: #fff; padding: 10px 22px; border-radius: 999px;
+      text-decoration: none; font-size: 14px; font-weight: 700; transition: opacity .2s;
+    }
+    .nav-cta:hover { opacity: .85; }
+
+    .blog-hero {
+      background: linear-gradient(135deg, #04140b 0%, #0f4a2c 50%, #1b7a4a 100%);
+      color: #fff; padding: 64px 5% 56px; text-align: center;
+    }
+    .blog-hero .section-label { color: #d4f5e2; }
+    .blog-hero h1 { font-size: clamp(24px, 5vw, 38px); font-weight: 900; margin-bottom: 12px; }
+    .blog-hero p { font-size: 15px; color: rgba(255,255,255,.8); }
+
+    .section-label {
+      text-align: center; font-size: 13px; font-weight: 700; color: var(--brand);
+      letter-spacing: .15em; text-transform: uppercase; margin-bottom: 12px;
+    }
+
+    main { max-width: 960px; margin: 0 auto; padding: 56px 5% 80px; }
+
+    .post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .post-card {
+      background: #fff; border-radius: 16px; overflow: hidden; text-decoration: none; color: inherit;
+      box-shadow: 0 4px 20px rgba(27,122,74,.08); transition: transform .2s, box-shadow .2s;
+      display: flex; flex-direction: column;
+    }
+    .post-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(27,122,74,.16); }
+    .post-thumb {
+      height: 140px; background: linear-gradient(135deg, var(--light), var(--brand2));
+      display: flex; align-items: center; justify-content: center; font-size: 42px;
+    }
+    .post-body { padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .post-tag {
+      align-self: flex-start; background: var(--light); color: var(--brand);
+      font-size: 11px; font-weight: 700; letter-spacing: .05em; padding: 4px 12px; border-radius: 999px;
+    }
+    .post-title { font-size: 17px; font-weight: 900; color: var(--dark); line-height: 1.5; }
+    .post-date { font-size: 12px; color: var(--text2); font-weight: 500; }
+    .post-excerpt { font-size: 13.5px; color: var(--text2); line-height: 1.75; flex: 1; }
+    .post-more { font-size: 13px; font-weight: 700; color: var(--brand); }
+
+    footer {
+      background: var(--dark); color: rgba(255,255,255,.5); text-align: center;
+      padding: 24px 5%; font-size: 13px;
+    }
+    footer a { color: rgba(255,255,255,.7); }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!--
+  記事の追加方法（今後、記事ファイルを増やすときのメモ）
+  1. blog/posts/ に新しいHTMLファイルを作る（blog/posts/sample-post.html をコピーして編集するのが早い）
+  2. このファイル（blog/index.html）の <div class="post-grid"> 内に
+     <a class="post-card">...</a> ブロックを1つ追加し、posts/ファイル名.html にリンクする
+  新しい記事ほど上（先頭）に追加する。
+-->
+
+<nav>
+  <a href="../index.html" class="nav-logo">AIビジネスサポート宮崎</a>
+  <div class="nav-links">
+    <a href="../index.html#pain">課題</a>
+    <a href="../index.html#solution">自動化の流れ</a>
+    <a href="../index.html#pricing">料金</a>
+    <a href="index.html" class="active">ブログ</a>
+  </div>
+  <a href="../index.html#cta" class="nav-cta">無料相談する</a>
+</nav>
+
+<section class="blog-hero">
+  <div class="section-label">BACKCASTING COLUMN</div>
+  <h1>未来逆算コラム</h1>
+  <p>「理想の未来」から逆算して、今日からの一歩を考えるコラムです</p>
+</section>
+
+<main>
+  <div class="post-grid">
+
+    <a class="post-card" href="posts/aichokunyu-jireishoukai.html">
+      <div class="post-thumb">📋</div>
+      <div class="post-body">
+        <span class="post-tag">未来逆算思考</span>
+        <h2 class="post-title">3年後、「集計に追われない現場」から逆算する日報デジタル化</h2>
+        <p class="post-date">2026.09.11</p>
+        <p class="post-excerpt">3年後の理想の現場像から逆算して、今日なぜ日報デジタル化（Phase 1）から始めるべきなのかを考えます。</p>
+        <span class="post-more">続きを読む →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="posts/ai-hajimekata.html">
+      <div class="post-thumb">💡</div>
+      <div class="post-body">
+        <span class="post-tag">未来逆算思考</span>
+        <h2 class="post-title">「AIって何から始めればいい？」を、未来から逆算して考える</h2>
+        <p class="post-date">2026.09.11</p>
+        <p class="post-excerpt">「今できること」からではなく「理想の未来」から逆算する——そんな未来逆算思考で、最初の一歩の決め方をお答えします。</p>
+        <span class="post-more">続きを読む →</span>
+      </div>
+    </a>
+
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 AIビジネスサポート宮崎　榎木茂｜生成AI研修講師・AIエージェントコンサルタント</p>
+</footer>
+
+</body>
+</html>

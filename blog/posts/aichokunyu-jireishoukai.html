@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3年後、「集計に追われない現場」から逆算する日報デジタル化｜未来逆算コラム</title>
+  <meta name="description" content="3年後の理想の現場像から逆算して、日報デジタル化（Phase 1）を今日から始める理由を考えます。未来逆算思考によるAI導入コラム。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #1b7a4a;
+      --brand2: #4fae7e;
+      --light: #e6f4ec;
+      --dark: #1a1a2e;
+      --gray: #f5f5f7;
+      --text: #333;
+      --text2: #666;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); line-height: 1.8; background: #fff; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--brand);
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-weight: 900; font-size: 15px; color: var(--brand); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { text-decoration: none; color: var(--text2); font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--brand); }
+    .nav-cta {
+      background: var(--brand); color: #fff; padding: 10px 22px; border-radius: 999px;
+      text-decoration: none; font-size: 14px; font-weight: 700; transition: opacity .2s;
+    }
+    .nav-cta:hover { opacity: .85; }
+
+    article { max-width: 720px; margin: 0 auto; padding: 56px 5% 40px; }
+    .post-tag {
+      display: inline-block; background: var(--light); color: var(--brand);
+      font-size: 12px; font-weight: 700; letter-spacing: .05em; padding: 5px 14px; border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    .post-title { font-size: clamp(24px, 4.5vw, 34px); font-weight: 900; color: var(--dark); line-height: 1.5; margin-bottom: 14px; }
+    .post-meta { font-size: 13px; color: var(--text2); margin-bottom: 36px; }
+    .post-content p { font-size: 16px; color: var(--text); margin-bottom: 24px; }
+    .post-content h2 {
+      font-size: 20px; font-weight: 900; color: var(--dark); margin: 40px 0 16px;
+      border-left: 4px solid var(--brand); padding-left: 14px;
+    }
+    .post-content ul { margin: 0 0 24px 20px; }
+    .post-content li { font-size: 15px; color: var(--text); margin-bottom: 8px; }
+    .callout {
+      background: var(--light); border-radius: 14px; padding: 24px 26px; margin: 32px 0;
+      font-size: 14.5px; color: var(--text);
+    }
+    .callout strong { color: var(--brand); }
+
+    .post-cta {
+      max-width: 720px; margin: 24px auto 0; padding: 0 5% 64px;
+    }
+    .post-cta-box {
+      background: linear-gradient(135deg, #1b7a4a, #0f4a2c); color: #fff;
+      border-radius: 16px; padding: 36px 28px; text-align: center;
+    }
+    .post-cta-box h3 { font-size: 18px; font-weight: 900; margin-bottom: 10px; }
+    .post-cta-box p { font-size: 13.5px; color: rgba(255,255,255,.8); margin-bottom: 20px; }
+    .btn-primary {
+      display: inline-block; background: #fff; color: var(--brand); padding: 13px 32px; border-radius: 999px;
+      font-size: 14px; font-weight: 900; text-decoration: none;
+    }
+    .back-link {
+      display: block; max-width: 720px; margin: 0 auto; padding: 0 5% 40px;
+      font-size: 13px; color: var(--brand); text-decoration: none;
+    }
+
+    footer {
+      background: var(--dark); color: rgba(255,255,255,.5); text-align: center;
+      padding: 24px 5%; font-size: 13px;
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../../index.html" class="nav-logo">AIビジネスサポート宮崎</a>
+  <div class="nav-links">
+    <a href="../../index.html#pain">課題</a>
+    <a href="../../index.html#solution">自動化の流れ</a>
+    <a href="../../index.html#pricing">料金</a>
+    <a href="../index.html" class="active">ブログ</a>
+  </div>
+  <a href="../../index.html#cta" class="nav-cta">無料相談する</a>
+</nav>
+
+<article>
+  <span class="post-tag">未来逆算思考</span>
+  <h1 class="post-title">3年後、「集計に追われない現場」から逆算する日報デジタル化</h1>
+  <p class="post-meta">2026.09.11｜AIビジネスサポート宮崎</p>
+
+  <div class="post-content">
+    <p>業務改善は「今できることから積み上げる」のではなく、「理想の未来を先に描き、そこから逆算して今日やることを決める」方が、遠回りをしません。今回は、運輸・警備業でよくある日報集計の悩みを例に、この「未来逆算思考」で考えてみます。</p>
+
+    <h2>まず、3年後の理想を描く</h2>
+    <p>たとえば、こんな運輸会社を想像してみてください。3年後、事務所では誰も紙の日報を数えていません。ドライバーの運行データはスマホ入力で自動集計され、月初には先月の走行実績と人件費がすでにグラフになっている。事務員は「集計する人」から「数字を見て判断する人」に変わっています。</p>
+
+    <h2>理想と現在のギャップを確認する</h2>
+    <p>一方、多くの現場の「今」はこうです。ドライバーからの紙の日報を、毎日事務員が1枚ずつ手で集計している。件数が多い日は、集計だけで1時間以上かかることも珍しくありません。字が読みにくく、確認のたびに電話で聞き直すこともあります。</p>
+    <ul>
+      <li>3年後：集計はゼロ、数字はリアルタイムで見える</li>
+      <li>今：毎日1時間の手集計、月末は日報が溜まって給与計算がギリギリ</li>
+    </ul>
+    <p>このギャップを埋めるのが、逆算して立てる「今日からの一歩」です。</p>
+
+    <h2>3年後から逆算すると、今日やることが1つに絞られる</h2>
+    <p>「集計に追われない現場」という3年後のゴールから逆算すると、最初にやるべきことは実はシンプルです。全部を一気に変えるのではなく、まず「紙をなくす」——Phase 1（紙日報デジタル化）から着手することです。</p>
+    <p>ドライバーは運行後にスマホで数項目を入力するだけ。事務所側では入力内容が自動で一覧化されるため、紙を集める・読む・転記するという作業がまるごと不要になります。これは3年後のゴールに向けた、逆算した最初の一手です。</p>
+
+    <div class="callout">
+      <strong>逆算のタイムライン例：</strong>3年後＝日報・給与・請求・売上が一気通貫で自動化された現場／1年後＝給与計算まで自動化が定着／今日＝まず日報だけをスマホ入力に切り替える。ゴールを先に決めることで、今日やるべき一歩が迷わず決まります。
+    </div>
+
+    <h2>逆算思考だからこそ、小さく始められる</h2>
+    <p>「まず日報だけ」というスモールスタートは、行き当たりばったりの第一歩ではなく、3年後のゴールから逆算して選んだ第一歩です。ゴールが見えているからこそ、現場が慣れてきたタイミングで次のフェーズ（給与計算の自動化）に迷わず進めます。</p>
+  </div>
+</article>
+
+<a class="back-link" href="../index.html">← ブログ一覧に戻る</a>
+
+<div class="post-cta">
+  <div class="post-cta-box">
+    <h3>「うちにも使えるか？」まずは無料相談で</h3>
+    <p>現状をお聞きした上で、どこから自動化できそうかをお伝えします。30分・費用ゼロです。</p>
+    <a href="../../index.html#cta" class="btn-primary">無料相談を申し込む</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 AIビジネスサポート宮崎　榎木茂｜生成AI研修講師・AIエージェントコンサルタント</p>
+</footer>
+
+</body>
+</html>
