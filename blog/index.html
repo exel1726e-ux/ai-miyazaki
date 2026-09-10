@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブログ｜AIビジネスサポート宮崎</title>
+  <meta name="description" content="未来から逆算するAI業務改善シリーズ。中小企業がAIで仕事を減らし、時間を取り戻すための考え方と実践法を、全10回でお伝えします。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #1f7a53;
+      --brand2: #2d9d6f;
+      --light: #e6f7ee;
+      --dark: #10241a;
+      --gray: #f5f5f7;
+      --text: #333;
+      --text2: #666;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); line-height: 1.8; background: #fff; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--brand);
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-weight: 900; font-size: 15px; color: var(--brand); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { text-decoration: none; color: var(--text2); font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--brand); }
+    .nav-cta {
+      background: var(--brand); color: #fff; padding: 10px 22px; border-radius: 999px;
+      text-decoration: none; font-size: 14px; font-weight: 700; transition: opacity .2s;
+    }
+    .nav-cta:hover { opacity: .85; }
+    @media (max-width: 640px) { .nav-links { display: none; } }
+
+    .blog-hero {
+      background: linear-gradient(135deg, #08160f 0%, #0d3d2a 50%, #1f7a53 100%);
+      color: #fff; padding: 72px 5% 56px; text-align: center;
+    }
+    .blog-hero .eyebrow {
+      display: inline-block; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
+      border-radius: 999px; padding: 6px 20px; font-size: 13px; font-weight: 700;
+      letter-spacing: .1em; margin-bottom: 20px;
+    }
+    .blog-hero h1 { font-size: clamp(24px, 5vw, 38px); font-weight: 900; line-height: 1.5; margin-bottom: 14px; }
+    .blog-hero p { font-size: 15px; color: rgba(255,255,255,.8); max-width: 620px; margin: 0 auto; }
+
+    .series-list { max-width: 820px; margin: 0 auto; padding: 56px 5% 88px; }
+    .series-part { font-size: 13px; font-weight: 700; color: var(--brand); letter-spacing: .1em; margin: 40px 0 16px; }
+    .series-part:first-child { margin-top: 0; }
+
+    .post-card {
+      display: flex; gap: 20px; align-items: flex-start;
+      background: #fff; border: 1px solid #eee; border-radius: 14px;
+      padding: 22px 24px; margin-bottom: 14px; text-decoration: none;
+      box-shadow: 0 2px 12px rgba(31,122,83,.05); transition: box-shadow .2s, transform .2s;
+    }
+    .post-card.available:hover { box-shadow: 0 8px 24px rgba(31,122,83,.12); transform: translateY(-2px); }
+    .post-card.disabled { opacity: .55; cursor: default; }
+    .post-num {
+      flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%;
+      background: var(--light); color: var(--brand); font-weight: 900; font-size: 15px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .post-card.disabled .post-num { background: var(--gray); color: #aaa; }
+    .post-title { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+    .post-desc { font-size: 13px; color: var(--text2); }
+    .post-status { font-size: 12px; font-weight: 700; color: #bbb; flex-shrink: 0; align-self: center; }
+
+    footer {
+      background: var(--dark); color: rgba(255,255,255,.5); text-align: center;
+      padding: 24px 5%; font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">AIビジネスサポート宮崎</a>
+  <div class="nav-links">
+    <a href="../index.html#solution">自動化の流れ</a>
+    <a href="../index.html#pricing">料金</a>
+    <a href="index.html">ブログ</a>
+    <a href="../index.html#profile">プロフィール</a>
+  </div>
+  <a href="../index.html#cta" class="nav-cta">無料相談する</a>
+</nav>
+
+<section class="blog-hero">
+  <div class="eyebrow">SERIES</div>
+  <h1>未来から逆算するAI業務改善</h1>
+  <p>3年後、あなたの会社はどんな姿でありたいですか。全10回で、AIを使って仕事を減らし、時間を取り戻す考え方と実践法をお伝えします。</p>
+</section>
+
+<div class="series-list">
+
+  <div class="series-part">第1部｜AIと仕事に慣れる</div>
+  <a class="post-card disabled">
+    <div class="post-num">1</div>
+    <div>
+      <div class="post-title">ChatGPTを仕事で使えるようになる方法</div>
+      <div class="post-desc">AIを難しく考えず、まず触ってみるための最初の一歩</div>
+    </div>
+    <div class="post-status">準備中</div>
+  </a>
+  <a class="post-card disabled">
+    <div class="post-num">2</div>
+    <div>
+      <div class="post-title">仕事のムダを見つける方法</div>
+      <div class="post-desc">業務改善は「AIで何ができるか」ではなく「何がムダか」から始まる</div>
+    </div>
+    <div class="post-status">準備中</div>
+  </a>
+  <a class="post-card disabled">
+    <div class="post-num">3</div>
+    <div>
+      <div class="post-title">自分専用プロンプトの作り方</div>
+      <div class="post-desc">AIを"自分の道具"にするためのプロンプト設計</div>
+    </div>
+    <div class="post-status">準備中</div>
+  </a>
+  <a class="post-card disabled">
+    <div class="post-num">4</div>
+    <div>
+      <div class="post-title">AIを業務改善につなげる考え方</div>
+      <div class="post-desc">点(便利な使い方)を線(業務改善)につなげる視点</div>
+    </div>
+    <div class="post-status">準備中</div>
+  </a>
+
+  <div class="series-part">第2部｜未来から逆算する</div>
+  <a class="post-card available" href="post-05.html">
+    <div class="post-num">5</div>
+    <div>
+      <div class="post-title">3年後も、その仕事を続けますか？</div>
+      <div class="post-desc">未来の会社の姿から、今の仕事を逆算して見直す</div>
+    </div>
+    <div class="post-status" style="color:var(--brand);">公開中</div>
+  </a>
+  <a class="post-card available" href="post-06.html">
+    <div class="post-num">6</div>
+    <div>
+      <div class="post-title">どの仕事からAI化すればいいのか？</div>
+      <div class="post-desc">「効果が大きく、着手しやすい」仕事から手をつける判断基準</div>
+    </div>
+    <div class="post-status" style="color:var(--brand);">公開中</div>
+  </a>
+  <a class="post-card available" href="post-07.html">
+    <div class="post-num">7</div>
+    <div>
+      <div class="post-title">「AIに任せる仕事」と「人がやるべき仕事」の分け方</div>
+      <div class="post-desc">判断・信頼関係が必要な仕事と、単純作業を切り分ける物差し</div>
+    </div>
+    <div class="post-status" style="color:var(--brand);">公開中</div>
+  </a>
+
+  <div class="series-part">第3部｜実際に動かす</div>
+  <a class="post-card disabled">
+    <div class="post-num">8</div>
+    <div>
+      <div class="post-title">小さく始めて、失敗しないAI導入の進め方</div>
+      <div class="post-desc">いきなり全社導入せず、1人・1業務から試す進め方とよくある失敗</div>
+    </div>
+    <div class="post-status">準備中</div>
+  </a>
+  <a class="post-card disabled">
+    <div class="post-num">9</div>
+    <div>
+      <div class="post-title">現場に「AIが使われない」を防ぐ、社員の巻き込み方</div>
+      <div class="post-desc">社長だけが盛り上がって現場が置き去りになる問題への対処</div>
+    </div>
+    <div class="post-status">準備中</div>
+  </a>
+
+  <div class="series-part">第4部｜仕組みとして定着させる</div>
+  <a class="post-card disabled">
+    <div class="post-num">10</div>
+    <div>
+      <div class="post-title">AIが当たり前にある会社の3年後</div>
+      <div class="post-desc">シリーズ全体を振り返り、「AIを使う会社」の完成形を描く</div>
+    </div>
+    <div class="post-status">準備中</div>
+  </a>
+
+</div>
+
+<footer>
+  <p>© 2026 AIビジネスサポート宮崎　榎木茂｜生成AI研修講師・AIエージェントコンサルタント</p>
+</footer>
+
+</body>
+</html>

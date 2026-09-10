@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「AIに任せる仕事」と「人がやるべき仕事」の分け方｜AIビジネスサポート宮崎</title>
+  <meta name="description" content="未来から逆算するAI業務改善 第7回。判断・信頼関係が必要な仕事と、単純作業をどう切り分けるかをお伝えします。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #1f7a53; --brand2: #2d9d6f; --light: #e6f7ee;
+      --dark: #10241a; --gray: #f5f5f7; --text: #333; --text2: #666;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); line-height: 1.9; background: #fff; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--brand);
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-weight: 900; font-size: 15px; color: var(--brand); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { text-decoration: none; color: var(--text2); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--brand); }
+    .nav-cta { background: var(--brand); color: #fff; padding: 10px 22px; border-radius: 999px; text-decoration: none; font-size: 14px; font-weight: 700; }
+    @media (max-width: 640px) { .nav-links { display: none; } }
+
+    .article-hero { background: linear-gradient(135deg, #08160f 0%, #0d3d2a 50%, #1f7a53 100%); color: #fff; padding: 56px 5% 44px; text-align: center; }
+    .article-hero .series-label { font-size: 12px; font-weight: 700; letter-spacing: .15em; color: #a8f0cb; margin-bottom: 14px; }
+    .article-hero h1 { font-size: clamp(22px, 4.5vw, 34px); font-weight: 900; line-height: 1.5; max-width: 760px; margin: 0 auto; }
+
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 48px 6% 80px; }
+    .article-wrap p { margin-bottom: 22px; font-size: 16px; }
+    .article-wrap h2 { font-size: 21px; font-weight: 900; color: var(--dark); margin: 48px 0 20px; padding-top: 8px; scroll-margin-top: 80px; border-left: 5px solid var(--brand); padding-left: 14px; }
+    .article-wrap strong { color: var(--brand); }
+    .article-wrap ul, .article-wrap ol { margin: 0 0 22px 22px; }
+    .article-wrap li { margin-bottom: 6px; }
+
+    .toc { background: var(--gray); border-radius: 14px; padding: 28px 28px 24px; margin-bottom: 8px; }
+    .toc-title { font-size: 13px; font-weight: 900; color: var(--brand); letter-spacing: .1em; margin-bottom: 14px; }
+    .toc ol { list-style: none; margin: 0; counter-reset: toc; }
+    .toc li { counter-increment: toc; margin-bottom: 10px; font-size: 14px; }
+    .toc li a { color: var(--text); text-decoration: none; }
+    .toc li a::before { content: counter(toc) "."; color: var(--brand); font-weight: 900; margin-right: 8px; }
+    .toc li a:hover { color: var(--brand); text-decoration: underline; }
+
+    .group-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 22px; }
+    .group-card { background: var(--gray); border-radius: 12px; padding: 18px 20px; border-left: 4px solid var(--brand); }
+    .group-card.g1 { border-color: var(--brand); background: var(--light); }
+    .group-card h4 { font-size: 14px; font-weight: 900; color: var(--dark); margin-bottom: 6px; }
+    .group-card p { font-size: 13px; color: var(--text2); margin-bottom: 0; }
+    @media (max-width: 560px) { .group-grid { grid-template-columns: 1fr; } }
+
+    .next-box { background: var(--light); border-radius: 14px; padding: 28px; margin-top: 48px; }
+    .next-box .label { font-size: 12px; font-weight: 700; color: var(--brand); letter-spacing: .1em; margin-bottom: 8px; }
+    .next-box a { color: var(--dark); font-weight: 700; font-size: 16px; text-decoration: none; }
+    .next-box a:hover { text-decoration: underline; }
+
+    .prev-box { margin-bottom: 32px; }
+    .prev-box a { font-size: 14px; color: var(--text2); text-decoration: none; }
+    .prev-box a:hover { color: var(--brand); }
+
+    .signature { margin-top: 56px; padding-top: 28px; border-top: 1px solid #eee; font-size: 15px; }
+    .signature a { color: var(--brand); font-weight: 700; text-decoration: none; }
+    .signature a:hover { text-decoration: underline; }
+
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 14px; color: var(--text2); text-decoration: none; }
+    .back-link:hover { color: var(--brand); }
+
+    footer { background: var(--dark); color: rgba(255,255,255,.5); text-align: center; padding: 24px 5%; font-size: 13px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">AIビジネスサポート宮崎</a>
+  <div class="nav-links">
+    <a href="../index.html#solution">自動化の流れ</a>
+    <a href="../index.html#pricing">料金</a>
+    <a href="index.html">ブログ</a>
+    <a href="../index.html#profile">プロフィール</a>
+  </div>
+  <a href="../index.html#cta" class="nav-cta">無料相談する</a>
+</nav>
+
+<section class="article-hero">
+  <div class="series-label">未来から逆算するAI業務改善｜第7回</div>
+  <h1>「AIに任せる仕事」と「人がやるべき仕事」の分け方</h1>
+</section>
+
+<div class="article-wrap">
+  <a href="index.html" class="back-link">← ブログ一覧へ戻る</a>
+
+  <div class="prev-box">
+    <a href="post-06.html">← 第6回「どの仕事からAI化すればいいのか？」を読む</a>
+  </div>
+
+  <p>こんにちは。<br>AIビジネスサポート宮崎の榎木 茂です。</p>
+
+  <p>前回は、「どの仕事からAI化すればいいのか」というテーマで、優先順位の付け方についてお伝えしました。</p>
+  <p>「効果が大きく、着手しやすい仕事」から始める。この考え方で、最初の1歩を選べるようになった方も多いのではないでしょうか。</p>
+  <p>ただ、優先順位が決まった後、もう一つ大事な問いが出てきます。「この仕事、本当に全部AIに任せていいのか？」です。</p>
+  <p>今回は、「AIに任せる仕事」と「人がやるべき仕事」の分け方についてお話しします。</p>
+
+  <div class="toc">
+    <div class="toc-title">目次</div>
+    <ol>
+      <li><a href="#s1">「AIに全部任せる」は危険な発想</a></li>
+      <li><a href="#s2">分ける基準は「判断」と「信頼関係」</a></li>
+      <li><a href="#s3">4つに分類してみる</a></li>
+      <li><a href="#s4">警備会社を例に、仕事を仕分けてみる</a></li>
+      <li><a href="#s5">「人がやるべき仕事」をAIが手伝うという考え方</a></li>
+      <li><a href="#s6">任せてはいけない仕事を任せてしまう典型パターン</a></li>
+      <li><a href="#s7">見分けるための3つの質問</a></li>
+      <li><a href="#s8">最後に</a></li>
+    </ol>
+  </div>
+
+  <h2 id="s1">1. 「AIに全部任せる」は危険な発想</h2>
+  <p>AI業務改善が進んでいくと、次に出てくるのがこの発想です。「もう、この仕事は全部AIにやらせよう」</p>
+  <p>効率化が進むほど、任せる範囲を広げたくなる気持ちはよくわかります。しかし、ここには落とし穴があります。</p>
+  <p>AIは、大量の情報を整理すること、決まったパターンで文章や数字を処理すること、過去の情報をもとに下書きを作ることは得意です。</p>
+  <p>しかし、取引先との信頼関係に関わる判断、最終的な責任を伴う決定、状況に応じた例外対応は、今のAIだけでは任せきれません。</p>
+  <p>任せていい仕事と、人が担うべき仕事を混同してしまうと、かえってトラブルの原因になります。</p>
+
+  <h2 id="s2">2. 分ける基準は「判断」と「信頼関係」</h2>
+  <p>仕事を仕分けるときに見るべき軸は、次の2つです。</p>
+  <p><strong>軸1:判断の重さ</strong> ― その仕事に、状況に応じた判断や例外対応がどれだけ必要か。</p>
+  <p><strong>軸2:信頼関係の重さ</strong> ― その仕事に、相手との関係性や責任がどれだけ関わるか。</p>
+  <p>この2つが軽い仕事ほど、AIに任せやすくなります。逆に、この2つが重い仕事ほど、人が担うべき仕事になります。</p>
+
+  <h2 id="s3">3. 4つに分類してみる</h2>
+  <p>前回の「効果」「着手しやすさ」と同じように、「判断の重さ」「信頼関係の重さ」の2軸で、仕事を4つに分けてみます。</p>
+  <div class="group-grid">
+    <div class="group-card g1"><h4>グループ1:判断も信頼関係も軽い</h4><p>AIに任せてよい。むしろ積極的に任せるべき仕事。</p></div>
+    <div class="group-card"><h4>グループ2:判断は重いが、信頼関係は軽い</h4><p>AIに下書きや選択肢を出させ、最終判断は人が行う。</p></div>
+    <div class="group-card"><h4>グループ3:判断は軽いが、信頼関係は重い</h4><p>作業自体はAIに手伝わせつつ、相手とのやり取りは人が担う。</p></div>
+    <div class="group-card"><h4>グループ4:判断も信頼関係も重い</h4><p>人が最初から最後まで担うべき仕事。</p></div>
+  </div>
+  <p>多くの会社でつまずくのは、グループ3やグループ4の仕事を、「作業だから」という理由だけでAIに任せてしまうことです。</p>
+
+  <h2 id="s4">4. 警備会社を例に、仕事を仕分けてみる</h2>
+  <p>前回までの警備会社の例で考えてみます。</p>
+  <ul>
+    <li>日報をもとに勤務時間を集計する</li>
+    <li>請求書のたたき台を作成する</li>
+    <li>クレーム対応の一次対応をする</li>
+    <li>取引先への値上げ交渉をする</li>
+    <li>新人研修用のマニュアル下書きを作る</li>
+    <li>事故やトラブル発生時の対応方針を決める</li>
+  </ul>
+  <p>これを4つのグループに当てはめると、次のようになります。</p>
+  <p><strong>グループ1(AIに任せてよい)</strong>:勤務時間の集計、請求書のたたき台作成、マニュアルの下書き作成 ― 定型的な作業で、判断も信頼関係も軽い。AIに任せて、人は確認だけでよい。</p>
+  <p><strong>グループ2(下書きは任せ、判断は人)</strong>:新人研修の内容構成 ― たたき台はAIに作らせつつ、「何を重視して教えるか」は経験のある人が判断する。</p>
+  <p><strong>グループ3(作業は手伝わせ、対応は人)</strong>:クレーム対応の一次対応 ― 状況整理や過去事例の検索はAIに手伝わせても、相手との実際のやり取りは人が担う。</p>
+  <p><strong>グループ4(人が担うべき)</strong>:取引先への値上げ交渉、事故やトラブル発生時の対応方針の決定 ― 信頼関係と責任が重く、AIに任せるべきではない仕事。</p>
+  <p>こうして分けてみると、「集計や下書きはAIに、交渉や最終判断は人に」という役割分担が見えてきます。</p>
+
+  <h2 id="s5">5. 「人がやるべき仕事」をAIが手伝うという考え方</h2>
+  <p>ここで大切なのは、グループ3やグループ4の仕事が「AIとまったく関係ない仕事」というわけではない、ということです。</p>
+  <p>例えば、取引先への値上げ交渉そのものは人が行うべきですが、過去のやり取りを整理する、業界の相場情報を集める、説明資料のたたき台を作るといった準備の部分は、AIに手伝わせることができます。</p>
+  <p>「最終的に人が判断し、人が伝える」という部分は変えずに、その手前の準備や整理をAIに任せる。この考え方であれば、信頼関係が重い仕事でも、AIをうまく活用できます。</p>
+
+  <h2 id="s6">6. 任せてはいけない仕事を任せてしまう典型パターン</h2>
+  <p>現場でよく見かける、注意したいパターンを2つ紹介します。</p>
+  <p><strong>パターン1:AIが作った文章を、そのまま相手に送ってしまう</strong><br>クレーム対応や謝罪連絡など、信頼関係が重い場面で、AIが作成した文面をそのまま送ってしまうケースです。内容に誤りがなくても、「機械的に対応された」という印象を与えてしまうことがあります。必ず、人の目で確認し、必要であれば自分の言葉に直してから送ることが大切です。</p>
+  <p><strong>パターン2:例外対応が必要な場面で、AIの判断をそのまま採用してしまう</strong><br>過去のパターンに当てはまらない、イレギュラーな事故やトラブルへの対応を、AIの提案どおりに進めてしまうケースです。AIは過去の情報をもとに提案することは得意ですが、「今回だけの特別な事情」までは汲み取れないことがあります。最終判断は、必ず人が行うようにします。</p>
+
+  <h2 id="s7">7. 見分けるための3つの質問</h2>
+  <p>目の前の仕事について、次の3つを聞いてみてください。</p>
+  <p><strong>質問1</strong> この仕事で間違えると、取引先や社員との信頼関係に影響しますか？<br>影響が大きいほど、最終的な対応は人が担うべき仕事です。</p>
+  <p><strong>質問2</strong> この仕事に、決まったパターンにない「例外」が起こりやすいですか？<br>例外が多い仕事ほど、AIの提案をそのまま採用せず、人の判断を挟む必要があります。</p>
+  <p><strong>質問3</strong> この仕事の「準備」の部分だけを、AIに手伝わせることはできますか？<br>最終判断や対応は人が行いつつ、情報整理や下書きだけをAIに任せる、という分け方ができないか考えてみます。</p>
+
+  <h2 id="s8">8. 最後に</h2>
+  <p>AI業務改善が進むと、「もっと任せられるのではないか」という気持ちが強くなっていきます。しかし、任せていい仕事と、人が担うべき仕事を分けずに進めると、かえって取引先や社員との信頼を損なうことにもなりかねません。</p>
+  <p>大切なのは、「全部を任せる」か「全部を人がやる」かの二択ではなく、判断や信頼関係が重い仕事は人が担う、その手前の整理や下書きはAIに手伝わせるという役割分担を、仕事ごとに考えることです。</p>
+  <p>前回までの「優先順位の付け方」と組み合わせて、「何から始めるか」「どこまで任せるか」の両方を意識しながら、AI業務改善を進めていただければと思います。</p>
+
+  <div class="next-box">
+    <div class="label">次回予告</div>
+    <p style="margin-bottom:0;">次回は、「小さく始めて、失敗しないAI導入の進め方」をテーマに、いきなり全社導入するのではなく、1人・1業務から試していく進め方や、よくある失敗についてお伝えしたいと思います。</p>
+  </div>
+
+  <p style="margin-top:32px;">最後まで読んでいただき、ありがとうございました。</p>
+
+  <div class="signature">
+    榎木 茂<br>
+    AIビジネスサポート宮崎<br>
+    <a href="https://exel1726e-ux.github.io/ai-miyazaki/">https://exel1726e-ux.github.io/ai-miyazaki/</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 AIビジネスサポート宮崎　榎木茂｜生成AI研修講師・AIエージェントコンサルタント</p>
+</footer>
+
+</body>
+</html>
