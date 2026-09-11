@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小さく始めて、失敗しないAI導入の進め方｜AIビジネスサポート宮崎</title>
+  <meta name="description" content="未来から逆算するAI業務改善 第8回。いきなり全社導入せず、1人・1業務から試すAI導入の進め方と、よくある失敗パターンをお伝えします。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #1f7a53; --brand2: #2d9d6f; --light: #e6f7ee;
+      --dark: #10241a; --gray: #f5f5f7; --text: #333; --text2: #666;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); line-height: 1.9; background: #fff; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--brand);
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-weight: 900; font-size: 15px; color: var(--brand); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { text-decoration: none; color: var(--text2); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--brand); }
+    .nav-cta { background: var(--brand); color: #fff; padding: 10px 22px; border-radius: 999px; text-decoration: none; font-size: 14px; font-weight: 700; }
+    @media (max-width: 640px) { .nav-links { display: none; } }
+
+    .article-hero { background: linear-gradient(135deg, #08160f 0%, #0d3d2a 50%, #1f7a53 100%); color: #fff; padding: 56px 5% 44px; text-align: center; }
+    .article-hero .series-label { font-size: 12px; font-weight: 700; letter-spacing: .15em; color: #a8f0cb; margin-bottom: 14px; }
+    .article-hero h1 { font-size: clamp(22px, 4.5vw, 34px); font-weight: 900; line-height: 1.5; max-width: 760px; margin: 0 auto; }
+
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 48px 6% 80px; }
+    .article-wrap p { margin-bottom: 22px; font-size: 16px; }
+    .article-wrap h2 { font-size: 21px; font-weight: 900; color: var(--dark); margin: 48px 0 20px; padding-top: 8px; scroll-margin-top: 80px; border-left: 5px solid var(--brand); padding-left: 14px; }
+    .article-wrap strong { color: var(--brand); }
+    .article-wrap ul, .article-wrap ol { margin: 0 0 22px 22px; }
+    .article-wrap li { margin-bottom: 6px; }
+
+    .toc { background: var(--gray); border-radius: 14px; padding: 28px 28px 24px; margin-bottom: 8px; }
+    .toc-title { font-size: 13px; font-weight: 900; color: var(--brand); letter-spacing: .1em; margin-bottom: 14px; }
+    .toc ol { list-style: none; margin: 0; counter-reset: toc; }
+    .toc li { counter-increment: toc; margin-bottom: 10px; font-size: 14px; }
+    .toc li a { color: var(--text); text-decoration: none; }
+    .toc li a::before { content: counter(toc) "."; color: var(--brand); font-weight: 900; margin-right: 8px; }
+    .toc li a:hover { color: var(--brand); text-decoration: underline; }
+
+    .step-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 22px; }
+    .step-card { display: flex; gap: 16px; background: var(--gray); border-radius: 12px; padding: 18px 20px; border-left: 4px solid var(--brand); align-items: flex-start; }
+    .step-card .num { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--brand); color: #fff; font-weight: 900; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+    .step-card h4 { font-size: 14px; font-weight: 900; color: var(--dark); margin-bottom: 4px; }
+    .step-card p { font-size: 13px; color: var(--text2); margin-bottom: 0; }
+
+    .fail-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 22px; }
+    .fail-card { background: var(--gray); border-radius: 12px; padding: 18px 18px; border-top: 4px solid var(--brand); }
+    .fail-card h4 { font-size: 13px; font-weight: 900; color: var(--dark); margin-bottom: 6px; }
+    .fail-card p { font-size: 12.5px; color: var(--text2); margin-bottom: 0; }
+    @media (max-width: 640px) { .fail-grid { grid-template-columns: 1fr; } }
+
+    .next-box { background: var(--light); border-radius: 14px; padding: 28px; margin-top: 48px; }
+    .next-box .label { font-size: 12px; font-weight: 700; color: var(--brand); letter-spacing: .1em; margin-bottom: 8px; }
+    .next-box a { color: var(--dark); font-weight: 700; font-size: 16px; text-decoration: none; }
+    .next-box a:hover { text-decoration: underline; }
+
+    .prev-box { margin-bottom: 32px; }
+    .prev-box a { font-size: 14px; color: var(--text2); text-decoration: none; }
+    .prev-box a:hover { color: var(--brand); }
+
+    .signature { margin-top: 56px; padding-top: 28px; border-top: 1px solid #eee; font-size: 15px; }
+    .signature a { color: var(--brand); font-weight: 700; text-decoration: none; }
+    .signature a:hover { text-decoration: underline; }
+
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 14px; color: var(--text2); text-decoration: none; }
+    .back-link:hover { color: var(--brand); }
+
+    footer { background: var(--dark); color: rgba(255,255,255,.5); text-align: center; padding: 24px 5%; font-size: 13px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">AIビジネスサポート宮崎</a>
+  <div class="nav-links">
+    <a href="../index.html#solution">自動化の流れ</a>
+    <a href="../index.html#pricing">料金</a>
+    <a href="index.html">ブログ</a>
+    <a href="../index.html#profile">プロフィール</a>
+  </div>
+  <a href="../index.html#cta" class="nav-cta">無料相談する</a>
+</nav>
+
+<section class="article-hero">
+  <div class="series-label">未来から逆算するAI業務改善｜第8回</div>
+  <h1>小さく始めて、失敗しないAI導入の進め方</h1>
+</section>
+
+<div class="article-wrap">
+  <a href="index.html" class="back-link">← ブログ一覧へ戻る</a>
+
+  <div class="prev-box">
+    <a href="post-07.html">← 第7回「AIに任せる仕事」と「人がやるべき仕事」の分け方を読む</a>
+  </div>
+
+  <p>こんにちは。<br>AIビジネスサポート宮崎の榎木 茂です。</p>
+
+  <p>前回は、「AIに任せる仕事」と「人がやるべき仕事」の分け方についてお伝えしました。</p>
+  <p>どの仕事から着手するか、どこまでAIに任せるか。ここまでで、考え方の土台はかなり整ってきたのではないかと思います。</p>
+  <p>ただ、実際に動き出そうとすると、多くの方がもう一つの壁にぶつかります。「これ、実際どう進めればいいんだろう」です。</p>
+  <p>今回は、AI導入を小さく始めて、失敗しないための進め方についてお話しします。</p>
+
+  <div class="toc">
+    <div class="toc-title">目次</div>
+    <ol>
+      <li><a href="#s1">「いきなり全社導入」が失敗する理由</a></li>
+      <li><a href="#s2">小さく始める、とはどういうことか</a></li>
+      <li><a href="#s3">最初の「1人・1業務」の選び方</a></li>
+      <li><a href="#s4">警備会社を例に、小さく始めてみる</a></li>
+      <li><a href="#s5">「試す期間」を区切ることの大切さ</a></li>
+      <li><a href="#s6">よくある失敗パターン3つ</a></li>
+      <li><a href="#s7">小さな成功を、次に広げるコツ</a></li>
+      <li><a href="#s8">最後に</a></li>
+    </ol>
+  </div>
+
+  <h2 id="s1">1. 「いきなり全社導入」が失敗する理由</h2>
+  <p>AI導入に前向きな経営者ほど、こう考えがちです。「せっかくやるなら、全社員に一斉に使ってもらおう」</p>
+  <p>気持ちはよくわかりますが、これが失敗の一番の原因になります。理由は、</p>
+  <ul>
+    <li>全員が同時につまずくと、質問や不満が一気に噴き出す</li>
+    <li>現場ごとにやり方が違い、一つのルールでは合わない部分が出てくる</li>
+    <li>うまくいかない箇所が見えたときには、すでに後戻りしにくい</li>
+  </ul>
+  <p>からです。</p>
+  <p>AI導入は、「一斉に始めて、一斉に定着させる」ものではありません。「小さく試して、直しながら広げる」ものだと私は考えています。</p>
+
+  <h2 id="s2">2. 小さく始める、とはどういうことか</h2>
+  <p>「小さく始める」とは、機能を減らすことではありません。関わる人数と範囲を絞ることです。</p>
+  <p>具体的には、次の3つを最小限にします。</p>
+  <p><strong>対象者</strong> ― 全員ではなく、1〜2名から。</p>
+  <p><strong>業務範囲</strong> ― 複数業務ではなく、1つの業務だけ。</p>
+  <p><strong>期間</strong> ― 「ずっと」ではなく、「まず1ヶ月」など区切って試す。</p>
+  <p>この3つを絞ることで、うまくいかない部分が出ても、影響が小さいうちに直せます。</p>
+
+  <h2 id="s3">3. 最初の「1人・1業務」の選び方</h2>
+  <p>小さく始めるとき、「誰に」「どの業務で」試すかがとても重要です。おすすめの選び方は、次の2つです。</p>
+  <p><strong>人:新しいやり方に前向きな人</strong><br>ベテランで慣れたやり方を変えたくない人より、変化に抵抗が少ない人を最初の協力者に選びます。この人がうまくいけば、他のスタッフへの説明もしやすくなります。</p>
+  <p><strong>業務:第6回で選んだ「グループA」の仕事</strong><br>効果が大きく、着手しやすい仕事。前回・前々回でお伝えした優先順位と役割分担の考え方が、ここでそのまま活きてきます。</p>
+
+  <h2 id="s4">4. 警備会社を例に、小さく始めてみる</h2>
+  <p>これまでの例に沿って、警備会社が日報のデジタル化を進めるケースで考えてみます。</p>
+  <p>いきなり全警備員にスマホ入力を義務化するのではなく、次のように進めます。</p>
+  <div class="step-list">
+    <div class="step-card">
+      <div class="num">1</div>
+      <div>
+        <h4>1名の警備員に協力してもらう</h4>
+        <p>新しいツールに抵抗が少ないスタッフを1名選び、1ヶ月間だけ試験的にスマホ入力へ切り替える。</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="num">2</div>
+      <div>
+        <h4>紙の日報と並行して運用する</h4>
+        <p>不具合が起きても業務が止まらないよう、最初のうちは紙の日報も念のため残しておく。</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="num">3</div>
+      <div>
+        <h4>1週間ごとに困りごとを聞く</h4>
+        <p>入力しにくい項目、わかりにくい操作がないか、短い時間でも定期的に確認する。</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="num">4</div>
+      <div>
+        <h4>1ヶ月後に効果を確認する</h4>
+        <p>集計時間がどれだけ減ったか、ミスが減ったかを本人と一緒に振り返る。</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="num">5</div>
+      <div>
+        <h4>うまくいけば、対象を2〜3名に広げる</h4>
+        <p>最初の協力者から他のスタッフへ説明してもらうと、現場での納得感が高まる。</p>
+      </div>
+    </div>
+  </div>
+  <p>この進め方であれば、途中でうまくいかない部分が見つかっても、影響を受けるのは1名だけです。紙の日報も残っているので、業務が止まることもありません。</p>
+
+  <h2 id="s5">5. 「試す期間」を区切ることの大切さ</h2>
+  <p>小さく始めるときに、もう一つ大切なのが「期間を区切る」ことです。</p>
+  <p>「とりあえず使ってみて」とだけ伝えると、いつまでも様子見の状態が続いてしまいます。</p>
+  <p>そうではなく、最初から「まず1ヶ月試して、続けるかどうかを一緒に判断しましょう」と伝えておきます。</p>
+  <p>こうすることで、</p>
+  <ul>
+    <li>協力してくれるスタッフも、期限があるので前向きに試しやすい</li>
+    <li>うまくいかなければ、期限を区切りに一度立ち止まって見直せる</li>
+    <li>うまくいけば、次の対象者への説明がしやすくなる</li>
+  </ul>
+  <p>というメリットがあります。「ずっと続ける前提」ではなく、「まず試す」という位置づけにすることが、現場の協力を得るコツです。</p>
+
+  <h2 id="s6">6. よくある失敗パターン3つ</h2>
+  <p>小さく始める際に、つまずきやすいポイントを3つ紹介します。</p>
+  <div class="fail-grid">
+    <div class="fail-card">
+      <h4>①目的を説明しないまま始める</h4>
+      <p>「便利だから使って」とだけ伝えると、現場は「仕事が増えた」としか感じません。何のためにやるのかを先に共有します。</p>
+    </div>
+    <div class="fail-card">
+      <h4>②いきなり完璧を目指す</h4>
+      <p>最初から全部の項目を自動化しようとすると、準備だけで疲れてしまいます。まずは一部分だけでも動かしてみることが大切です。</p>
+    </div>
+    <div class="fail-card">
+      <h4>③振り返りの機会を作らない</h4>
+      <p>試してそのまま放置すると、小さな不満が積み重なって「使われなくなる」原因になります。定期的に感想を聞く場を設けます。</p>
+    </div>
+  </div>
+
+  <h2 id="s7">7. 小さな成功を、次に広げるコツ</h2>
+  <p>最初の1人・1業務でうまくいったら、そこで終わりにせず、次に広げていきます。ポイントは、成功をそのまま横展開しようとしないことです。</p>
+  <p>広げるときは、次のことを意識します。</p>
+  <p><strong>最初の協力者に、体験を話してもらう</strong> ― 経営者や担当者が説明するより、現場のスタッフ本人が話す方が、他のスタッフに伝わりやすくなります。</p>
+  <p><strong>次の対象者にも、同じように期間を区切る</strong> ― 一度うまくいったからといって、次から一斉導入に切り替えると、また同じ失敗を繰り返しかねません。</p>
+  <p><strong>業務ごとに、小さな成功を積み重ねる</strong> ― 日報がうまくいったら、次は請求書、というように、第6回でお伝えした優先順位に沿って一つずつ広げていきます。</p>
+
+  <h2 id="s8">8. 最後に</h2>
+  <p>AI導入は、大きな決断が必要なものだと思われがちです。しかし実際には、最初の一歩はとても小さくて構いません。</p>
+  <p>1人の協力者。1つの業務。1ヶ月の試用期間。この小さな一歩から始めて、うまくいった部分を少しずつ広げていく。それが、現場に定着するAI導入の進め方だと、私は考えています。</p>
+  <p>これまでお伝えしてきた「3年後から逆算する視点」「優先順位の付け方」「AIに任せる仕事の見極め方」を土台に、まずは小さく、一つだけ試してみてください。</p>
+
+  <div class="next-box">
+    <div class="label">次回予告</div>
+    <p style="margin-bottom:0;">次回は、「現場に『AIが使われない』を防ぐ、社員の巻き込み方」をテーマに、社長だけが盛り上がって現場が置き去りになってしまう問題と、その対処法についてお伝えしたいと思います。</p>
+  </div>
+
+  <p style="margin-top:32px;">最後まで読んでいただき、ありがとうございました。</p>
+
+  <div class="signature">
+    榎木 茂<br>
+    AIビジネスサポート宮崎<br>
+    <a href="https://exel1726e-ux.github.io/ai-miyazaki/">https://exel1726e-ux.github.io/ai-miyazaki/</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 AIビジネスサポート宮崎　榎木茂｜生成AI研修講師・AIエージェントコンサルタント</p>
+</footer>
+
+</body>
+</html>
