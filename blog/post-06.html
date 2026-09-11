@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>どの仕事からAI化すればいいのか？｜AIビジネスサポート宮崎</title>
+  <meta name="description" content="未来から逆算するAI業務改善 第6回。業務改善の優先順位の付け方を、4象限と3つの質問でお伝えします。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #1f7a53; --brand2: #2d9d6f; --light: #e6f7ee;
+      --dark: #10241a; --gray: #f5f5f7; --text: #333; --text2: #666;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); line-height: 1.9; background: #fff; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--brand);
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-weight: 900; font-size: 15px; color: var(--brand); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { text-decoration: none; color: var(--text2); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--brand); }
+    .nav-cta { background: var(--brand); color: #fff; padding: 10px 22px; border-radius: 999px; text-decoration: none; font-size: 14px; font-weight: 700; }
+    @media (max-width: 640px) { .nav-links { display: none; } }
+
+    .article-hero { background: linear-gradient(135deg, #08160f 0%, #0d3d2a 50%, #1f7a53 100%); color: #fff; padding: 56px 5% 44px; text-align: center; }
+    .article-hero .series-label { font-size: 12px; font-weight: 700; letter-spacing: .15em; color: #a8f0cb; margin-bottom: 14px; }
+    .article-hero h1 { font-size: clamp(22px, 4.5vw, 34px); font-weight: 900; line-height: 1.5; max-width: 760px; margin: 0 auto; }
+
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 48px 6% 80px; }
+    .article-wrap p { margin-bottom: 22px; font-size: 16px; }
+    .article-wrap h2 { font-size: 21px; font-weight: 900; color: var(--dark); margin: 48px 0 20px; padding-top: 8px; scroll-margin-top: 80px; border-left: 5px solid var(--brand); padding-left: 14px; }
+    .article-wrap strong { color: var(--brand); }
+    .article-wrap ul, .article-wrap ol { margin: 0 0 22px 22px; }
+    .article-wrap li { margin-bottom: 6px; }
+
+    .toc { background: var(--gray); border-radius: 14px; padding: 28px 28px 24px; margin-bottom: 8px; }
+    .toc-title { font-size: 13px; font-weight: 900; color: var(--brand); letter-spacing: .1em; margin-bottom: 14px; }
+    .toc ol { list-style: none; margin: 0; counter-reset: toc; }
+    .toc li { counter-increment: toc; margin-bottom: 10px; font-size: 14px; }
+    .toc li a { color: var(--text); text-decoration: none; }
+    .toc li a::before { content: counter(toc) "."; color: var(--brand); font-weight: 900; margin-right: 8px; }
+    .toc li a:hover { color: var(--brand); text-decoration: underline; }
+
+    .group-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 22px; }
+    .group-card { background: var(--gray); border-radius: 12px; padding: 18px 20px; border-left: 4px solid var(--brand); }
+    .group-card.gA { border-color: var(--brand); background: var(--light); }
+    .group-card h4 { font-size: 14px; font-weight: 900; color: var(--dark); margin-bottom: 6px; }
+    .group-card p { font-size: 13px; color: var(--text2); margin-bottom: 0; }
+    @media (max-width: 560px) { .group-grid { grid-template-columns: 1fr; } }
+
+    .next-box { background: var(--light); border-radius: 14px; padding: 28px; margin-top: 48px; }
+    .next-box .label { font-size: 12px; font-weight: 700; color: var(--brand); letter-spacing: .1em; margin-bottom: 8px; }
+    .next-box a { color: var(--dark); font-weight: 700; font-size: 16px; text-decoration: none; }
+    .next-box a:hover { text-decoration: underline; }
+
+    .prev-box { margin-bottom: 32px; }
+    .prev-box a { font-size: 14px; color: var(--text2); text-decoration: none; }
+    .prev-box a:hover { color: var(--brand); }
+
+    .signature { margin-top: 56px; padding-top: 28px; border-top: 1px solid #eee; font-size: 15px; }
+    .signature a { color: var(--brand); font-weight: 700; text-decoration: none; }
+    .signature a:hover { text-decoration: underline; }
+
+    .back-link { display: inline-block; margin-bottom: 24px; font-size: 14px; color: var(--text2); text-decoration: none; }
+    .back-link:hover { color: var(--brand); }
+
+    footer { background: var(--dark); color: rgba(255,255,255,.5); text-align: center; padding: 24px 5%; font-size: 13px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">AIビジネスサポート宮崎</a>
+  <div class="nav-links">
+    <a href="../index.html#solution">自動化の流れ</a>
+    <a href="../index.html#pricing">料金</a>
+    <a href="index.html">ブログ</a>
+    <a href="../index.html#profile">プロフィール</a>
+  </div>
+  <a href="../index.html#cta" class="nav-cta">無料相談する</a>
+</nav>
+
+<section class="article-hero">
+  <div class="series-label">未来から逆算するAI業務改善｜第6回</div>
+  <h1>どの仕事からAI化すればいいのか？<br>― 業務改善の優先順位の付け方</h1>
+</section>
+
+<div class="article-wrap">
+  <a href="index.html" class="back-link">← ブログ一覧へ戻る</a>
+
+  <div class="prev-box">
+    <a href="post-05.html">← 第5回「3年後も、その仕事を続けますか？」を読む</a>
+  </div>
+
+  <p>こんにちは。<br>AIビジネスサポート宮崎の榎木 茂です。</p>
+
+  <p>前回は、「3年後も、その仕事を続けますか？」というテーマで、未来から逆算して今の仕事を見直す考え方をお伝えしました。</p>
+  <p>「なくしたい仕事」「減らしたい仕事」が、いくつか思い浮かんだ方もいらっしゃるのではないでしょうか。</p>
+  <p>ただ、ここで一つ壁にぶつかります。「じゃあ、どれから手をつければいいのか」です。</p>
+  <p>今回は、この「優先順位の付け方」についてお話しします。</p>
+
+  <div class="toc">
+    <div class="toc-title">目次</div>
+    <ol>
+      <li><a href="#s1">「全部AI化したい」は、一番よくある失敗</a></li>
+      <li><a href="#s2">優先順位は「2つの軸」で決める</a></li>
+      <li><a href="#s3">4つのグループに分けてみる</a></li>
+      <li><a href="#s4">警備会社を例に、4つに分けてみる</a></li>
+      <li><a href="#s5">「効果」は、時間だけで測らなくていい</a></li>
+      <li><a href="#s6">「着手しやすさ」は、こう判断する</a></li>
+      <li><a href="#s7">優先順位をつける3つの質問</a></li>
+      <li><a href="#s8">まずは「1つだけ」選んでみる</a></li>
+      <li><a href="#s9">最後に</a></li>
+    </ol>
+  </div>
+
+  <h2 id="s1">1. 「全部AI化したい」は、一番よくある失敗</h2>
+  <p>AIの相談を受けていると、こんな声をよく聞きます。「日報も、請求書も、勤怠管理も、全部AIで楽にしたい」</p>
+  <p>気持ちはとてもよくわかります。しかし、これを一度に全部やろうとすると、たいていうまくいきません。理由は単純で、</p>
+  <ul>
+    <li>覚えることが多すぎて、現場が混乱する</li>
+    <li>どこかでつまずくと、全部が止まって見える</li>
+    <li>効果が見えるまでに時間がかかり、途中で疲れてしまう</li>
+  </ul>
+  <p>からです。</p>
+  <p>AI業務改善は、「一度に全部変える」ものではなく、「一つずつ確実に変えていく」ものだと私は考えています。では、その「一つ」をどう選べばいいのでしょうか。</p>
+
+  <h2 id="s2">2. 優先順位は「2つの軸」で決める</h2>
+  <p>仕事を選ぶときに見るべき軸は、実はシンプルです。</p>
+  <p><strong>軸1:効果が大きいか</strong> ― その作業を減らしたとき、時間や手間がどれだけ減るか。</p>
+  <p><strong>軸2:着手しやすいか</strong> ― その作業を変えるのに、どれだけ手間や準備が必要か。</p>
+  <p>この2つを掛け合わせると、仕事は4つのグループに分かれます。</p>
+
+  <h2 id="s3">3. 4つのグループに分けてみる</h2>
+  <div class="group-grid">
+    <div class="group-card gA"><h4>グループA:効果が大きく、着手しやすい</h4><p>最優先。ここから始めます。</p></div>
+    <div class="group-card"><h4>グループB:効果は大きいが、着手が難しい</h4><p>準備をしながら、少しずつ進める。</p></div>
+    <div class="group-card"><h4>グループC:効果は小さいが、着手しやすい</h4><p>余力があれば手をつける。急がなくてよい。</p></div>
+    <div class="group-card"><h4>グループD:効果が小さく、着手も難しい</h4><p>後回しでよい。無理に手をつけない。</p></div>
+  </div>
+  <p>多くの会社が失敗するのは、「効果が大きそうだから」という理由だけで、いきなりグループBの仕事から手をつけてしまうことです。勤怠システムの刷新、基幹システムとの連携など、効果は大きいものの、関係者が多く、準備にも時間がかかる仕事です。</p>
+  <p>こうした仕事は、最初の1歩には向いていません。まずはグループA、「効果が大きく、すぐに着手できる仕事」を見つけることが大切です。</p>
+
+  <h2 id="s4">4. 警備会社を例に、4つに分けてみる</h2>
+  <p>前回も登場した警備会社の例で考えてみます。日々の業務の中には、こんな作業があったとします。</p>
+  <ul>
+    <li>紙の日報をExcelへ入力する</li>
+    <li>勤務時間を電卓やExcelで集計する</li>
+    <li>請求書用のデータを別表へ転記する</li>
+    <li>新人向けのマニュアルを毎回一から作る</li>
+    <li>取引先ごとに異なるフォーマットの見積書を作る</li>
+    <li>勤怠システムを新しいものに入れ替える</li>
+  </ul>
+  <p>これを先ほどの4象限に当てはめると、次のようになります。</p>
+  <p><strong>グループA(最優先)</strong>:日報のExcel入力、勤務時間の集計 ― 毎日・毎月の繰り返し作業で効果が大きく、AIやスプレッドシートの自動化で比較的すぐに着手できる。</p>
+  <p><strong>グループB(準備しながら進める)</strong>:勤怠システムの入れ替え ― 効果は大きいが、既存システムとの連携やコストがかかり、時間をかけて計画する必要がある。</p>
+  <p><strong>グループC(余力があれば)</strong>:新人向けマニュアル作成、取引先ごとの見積書フォーマット対応 ― 効果は限定的だが、AIに下書きをさせるだけならすぐ着手できる。</p>
+  <p><strong>グループD(後回し)</strong>:大掛かりなシステム全体の刷新 ― 効果も不透明で、着手のハードルも高い。今は動かさない。</p>
+  <p>こうして整理すると、「まずは日報と勤務時間の集計から」という優先順位が、自然と見えてきます。</p>
+
+  <h2 id="s5">5. 「効果」は、時間だけで測らなくていい</h2>
+  <p>効果の大きさというと、つい「何時間減るか」だけで考えてしまいがちです。もちろんそれも大切な指標ですが、他にも見るべき視点があります。</p>
+  <ul>
+    <li>ミスが減るか(入力ミス、転記ミスなど)</li>
+    <li>ストレスが減るか(毎回面倒に感じている作業か)</li>
+    <li>関わる人数が多いか(1人の作業か、複数人が関わる作業か)</li>
+    <li>待ち時間が減るか(確認や承認待ちで止まっている時間)</li>
+  </ul>
+  <p>例えば、時間はそれほど減らなくても、「毎回ミスが起きて、確認と修正に追われている」作業であれば、それも十分に「効果が大きい」仕事です。数字だけでなく、「この仕事、いつもストレスだな」と感じる作業も、優先順位を考えるヒントになります。</p>
+
+  <h2 id="s6">6. 「着手しやすさ」は、こう判断する</h2>
+  <p>もう一つの軸、「着手しやすいか」は、次のような点で判断します。</p>
+  <ul>
+    <li>自分(または担当者)だけで完結する仕事か</li>
+    <li>今使っているツール(スマホ、Excel、ChatGPTなど)でできるか</li>
+    <li>大きな投資や契約が必要ないか</li>
+    <li>失敗しても、大きな影響が出ない仕事か</li>
+  </ul>
+  <p>逆に、複数の部署や取引先が関わる、新しいシステムの導入や契約が必要、失敗すると業務が止まってしまう。このような仕事は、着手のハードルが高いと言えます。</p>
+  <p>最初の1歩は、「小さく試して、うまくいかなくても大きな問題にならない仕事」を選ぶのが鉄則です。</p>
+
+  <h2 id="s7">7. 優先順位をつける3つの質問</h2>
+  <p>自分の会社の仕事を思い浮かべながら、次の3つを聞いてみてください。</p>
+  <p><strong>質問1</strong> その仕事は、毎日・毎週・毎月、繰り返し発生していますか？<br>繰り返しが多いほど、AI化・自動化の効果は積み重なります。</p>
+  <p><strong>質問2</strong> その仕事は、今ある道具(スマホ・Excel・ChatGPTなど)だけで変えられますか？<br>新しい投資やシステム導入が要らない仕事ほど、すぐに着手できます。</p>
+  <p><strong>質問3</strong> その仕事でミスや手戻りが起きたとき、影響は小さいですか？<br>最初の1歩は、多少うまくいかなくても、業務全体が止まらない仕事を選びます。</p>
+  <p>この3つに「YES」が多い仕事ほど、グループA(最優先)に近い仕事だと言えます。</p>
+
+  <h2 id="s8">8. まずは「1つだけ」選んでみる</h2>
+  <p>優先順位を考えるとき、一度に全部の仕事をリストアップして分類しようとすると、それだけで疲れてしまいます。</p>
+  <p>おすすめは、「今、一番面倒だと感じている仕事を1つだけ」思い浮かべることです。その1つについて、効果は大きいか、着手しやすいかを考えてみる。そして、もしそれがグループAに近いのであれば、そこから始めてみてください。</p>
+  <p>1つの仕事がうまく変われば、「次はこの仕事も変えられるかもしれない」と、自然と次の一歩につながっていきます。</p>
+
+  <h2 id="s9">9. 最後に</h2>
+  <p>前回お伝えした「3年後から逆算する視点」と、今回の「優先順位の付け方」を組み合わせると、3年後、なくしたい仕事が見えてくる。その中から、今すぐ着手できる仕事が絞り込める、という流れができます。</p>
+  <p>大きな改革を一気に進める必要はありません。まずは1つ、効果が大きく、着手しやすい仕事を選んで、小さく変えてみることから始めてみてください。</p>
+
+  <div class="next-box">
+    <div class="label">次回予告</div>
+    <p style="margin-bottom:0;">次回は、「AIに任せる仕事」と「人がやるべき仕事」の分け方をテーマに、判断や信頼関係が必要な仕事と、単純作業をどう切り分けるかについて、お伝えしたいと思います。</p>
+    <a href="post-07.html">→ 第7回「AIに任せる仕事」と「人がやるべき仕事」の分け方を読む</a>
+  </div>
+
+  <p style="margin-top:32px;">最後まで読んでいただき、ありがとうございました。</p>
+
+  <div class="signature">
+    榎木 茂<br>
+    AIビジネスサポート宮崎<br>
+    <a href="https://exel1726e-ux.github.io/ai-miyazaki/">https://exel1726e-ux.github.io/ai-miyazaki/</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 AIビジネスサポート宮崎　榎木茂｜生成AI研修講師・AIエージェントコンサルタント</p>
+</footer>
+
+</body>
+</html>
