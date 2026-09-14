@@ -268,6 +268,9 @@
       background: var(--dark); color: rgba(255,255,255,.5); text-align: center;
       padding: 24px 5%; font-size: 13px;
     }
+    .footer-links { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; margin-bottom: 12px; }
+    .footer-links a { color: rgba(255,255,255,.82); text-decoration: underline; text-underline-offset: 3px; }
+    .footer-links a:hover { color: #fff; }
 
     /* レスポンシブ */
     @media (max-width: 640px) {
@@ -422,15 +425,15 @@
 <section class="pricing" id="pricing">
   <div class="section-label">PRICING</div>
   <h2 class="section-title">料金プラン</h2>
-  <p class="section-desc">ヒアリング後に正式見積もりします。下記は目安です</p>
+  <p class="section-desc">表示価格はすべて税込です。ヒアリング後、契約申込み前に正式な税込金額をお見積もりします</p>
 
   <div class="pricing-tab-label">▼ 導入費用（初期一括）</div>
   <div class="pricing-grid">
     <div class="pricing-card">
       <div class="plan-name">スターター</div>
       <div class="plan-phase">Phase 1のみ｜日報デジタル化</div>
-      <div class="plan-price">小規模（〜30名）<strong>10万円〜</strong></div>
-      <div class="plan-price2">中規模（30〜100名）<strong>15万円〜</strong></div>
+      <div class="plan-price">小規模（〜30名）<strong>10万円〜（税込）</strong></div>
+      <div class="plan-price2">中規模（30〜100名）<strong>15万円〜（税込）</strong></div>
       <ul class="plan-features">
         <li>日報デジタル化</li>
         <li>スタッフ操作研修</li>
@@ -442,8 +445,8 @@
     <div class="pricing-card featured">
       <div class="plan-name">スタンダード</div>
       <div class="plan-phase">Phase 1〜2｜＋給与計算自動化</div>
-      <div class="plan-price">小規模（〜30名）<strong>25万円〜</strong></div>
-      <div class="plan-price2">中規模（30〜100名）<strong>35万円〜</strong></div>
+      <div class="plan-price">小規模（〜30名）<strong>25万円〜（税込）</strong></div>
+      <div class="plan-price2">中規模（30〜100名）<strong>35万円〜（税込）</strong></div>
       <ul class="plan-features">
         <li>日報デジタル化</li>
         <li>給与計算自動化</li>
@@ -455,8 +458,8 @@
     <div class="pricing-card">
       <div class="plan-name">フルパック</div>
       <div class="plan-phase">Phase 1〜4｜全工程一気通貫</div>
-      <div class="plan-price">小規模（〜30名）<strong>45万円〜</strong></div>
-      <div class="plan-price2">中規模（30〜100名）<strong>65万円〜</strong></div>
+      <div class="plan-price">小規模（〜30名）<strong>45万円〜（税込）</strong></div>
+      <div class="plan-price2">中規模（30〜100名）<strong>65万円〜（税込）</strong></div>
       <ul class="plan-features">
         <li>日報デジタル化</li>
         <li>給与計算自動化</li>
@@ -472,17 +475,17 @@
     <div class="support-card">
       <div class="support-name">ライトサポート</div>
       <div class="support-desc">不具合対応のみ（メール・チャット）</div>
-      <div class="support-price">1万円／月</div>
+      <div class="support-price">1万円／月（税込）</div>
     </div>
     <div class="support-card">
       <div class="support-name">スタンダードサポート</div>
       <div class="support-desc">不具合対応＋月1回オンライン相談</div>
-      <div class="support-price">3万円／月</div>
+      <div class="support-price">3万円／月（税込）</div>
     </div>
     <div class="support-card">
       <div class="support-name">プレミアムサポート</div>
       <div class="support-desc">不具合対応＋月1回訪問＋研修指導会（年2回）</div>
-      <div class="support-price">5万円／月</div>
+      <div class="support-price">5万円／月（税込）</div>
     </div>
   </div>
 </section>
@@ -654,6 +657,11 @@
 </section>
 
 <footer>
+  <div class="footer-links" aria-label="法的情報">
+    <a href="privacy-policy.html">プライバシーポリシー</a>
+    <a href="terms-of-service.html">利用規約</a>
+    <a href="specified-commercial-transactions.html">特定商取引法に基づく表記</a>
+  </div>
   <p>© 2026 AIビジネスサポート宮崎　榎木茂｜生成AI研修講師・AIエージェントコンサルタント</p>
 </footer>
 
