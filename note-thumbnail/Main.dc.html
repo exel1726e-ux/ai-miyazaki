@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Noto Sans JP', sans-serif; }
+    a { color: #a8f0cb; }
+    a:hover { color: #cffbe0; }
+  </style>
+</helmet>
+<div style="width:1280px;height:670px;position:relative;overflow:hidden;background:linear-gradient(135deg, #08160f 0%, #0d3d2a 52%, #1f7a53 100%);">
+
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 82% 20%, rgba(140,255,190,.16), transparent 58%);"></div>
+
+  <svg width="1280" height="670" style="position:absolute;inset:0;" viewBox="0 0 1280 670">
+    <line x1="0" y1="590" x2="1280" y2="590" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+    <line x1="0" y1="120" x2="1280" y2="120" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+  </svg>
+
+  <div style="position:absolute;left:80px;top:96px;display:flex;flex-direction:column;gap:26px;max-width:760px;">
+    <div style="display:inline-flex;align-self:flex-start;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:8px 20px;">
+      <span style="width:7px;height:7px;border-radius:50%;background:#a8f0cb;display:inline-block;"></span>
+      <span style="font-size:14px;font-weight:700;letter-spacing:.08em;color:#e6f7ee;">思考のコラム</span>
+    </div>
+
+    <h1 style="margin:0;font-size:64px;font-weight:900;line-height:1.32;color:#fff;letter-spacing:.01em;">
+      未来から逆算する。<br>
+      <span style="color:#a8f0cb;">今、何をすべきか</span><br>
+      を考え、行動する。
+    </h1>
+  </div>
+
+  <svg width="380" height="420" style="position:absolute;right:70px;top:150px;" viewBox="0 0 380 420">
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+        <path d="M0,0 L10,5 L0,10 Z" fill="#a8f0cb"/>
+      </marker>
+    </defs>
+    <path d="M 300 60 C 210 60, 110 190, 70 340" fill="none" stroke="#a8f0cb" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+
+    <circle cx="300" cy="60" r="30" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+    <circle cx="300" cy="60" r="7" fill="#e6f7ee"/>
+    <text x="300" y="18" text-anchor="middle" font-size="20" font-weight="700" fill="#e6f7ee">未来</text>
+
+    <circle cx="70" cy="340" r="46" fill="none" stroke="rgba(168,240,203,.35)" stroke-width="1.5"/>
+    <circle cx="70" cy="340" r="34" fill="#1f7a53" stroke="#a8f0cb" stroke-width="2"/>
+    <circle cx="70" cy="340" r="9" fill="#ffffff"/>
+    <text x="70" y="410" text-anchor="middle" font-size="24" font-weight="900" fill="#ffffff">今</text>
+  </svg>
+
+  <div style="position:absolute;left:80px;bottom:44px;display:flex;align-items:center;gap:12px;">
+    <span style="font-size:16px;font-weight:900;color:#fff;">AIビジネスサポート宮崎</span>
+    <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.4);display:inline-block;"></span>
+    <span style="font-size:15px;font-weight:500;color:rgba(255,255,255,.65);">榎木 茂</span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
