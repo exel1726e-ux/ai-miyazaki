@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://exel1726e-ux.github.io/ai-miyazaki/sitemap.xml
