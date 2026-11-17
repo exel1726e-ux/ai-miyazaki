@@ -266,6 +266,10 @@
     }
     .cta h2 { font-size: clamp(22px, 4vw, 36px); font-weight: 900; margin-bottom: 12px; }
     .cta p { font-size: 16px; color: rgba(255,255,255,.8); margin-bottom: 40px; }
+    .cta-form { max-width: 720px; margin: 0 auto 32px; background: #fff; border-radius: 14px; padding: 8px; box-shadow: 0 8px 30px rgba(0,0,0,.25); }
+    .cta-form iframe { display: block; width: 100%; height: 1150px; border: 0; border-radius: 10px; }
+    .cta-form-note { font-size: 13px; color: rgba(255,255,255,.75); margin-bottom: 20px; }
+    @media (max-width: 600px) { .cta-form iframe { height: 1350px; } }
     .cta-contact { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
     .cta-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
     .cta-item .label { font-size: 12px; color: rgba(255,255,255,.6); }
@@ -337,7 +341,7 @@ AI活用と業務改善で、毎日の仕事をもっとラクに。<br>
     <span class="hero-badge">初回相談 無料</span>
   </div>
   <div class="hero-btns">
-    <a href="mailto:exel1726e@gmail.com" class="btn-primary">✉ メールで無料相談する</a>
+    <a href="#cta" class="btn-primary">✉ 無料相談フォームへ</a>
     <a href="#solution" class="btn-secondary">自動化の流れを見る</a>
   </div>
 </section>
@@ -605,10 +609,10 @@ AI活用と業務改善で、毎日の仕事をもっとラクに。<br>
       外部ツール利用料は別途お見積もり。
     </p>
 
-    <a href="mailto:exel1726e@gmail.com"
+    <a href="#cta"
        class="nav-cta"
        style="display:inline-block;margin-top:24px;">
-      メールで無料相談する
+      無料相談フォームへ
     </a>
 
   </div>
@@ -866,6 +870,10 @@ AIに興味はあるけれど、何から始めればよいかわからない。
 無理にAI導入をおすすめすることはありません。<br>
 御社の状況に合わせて、一緒に考えます。
 </p>
+  <div class="cta-form">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6BjpZp6DzUBGj6Lb1-5KpH3YgNRfsva_UQoz9iaIuM8VPwg/viewform?embedded=true" title="無料相談のお申し込みフォーム" loading="lazy">読み込んでいます…</iframe>
+  </div>
+  <p class="cta-form-note">フォームが表示されない場合は<a href="https://docs.google.com/forms/d/e/1FAIpQLSe6BjpZp6DzUBGj6Lb1-5KpH3YgNRfsva_UQoz9iaIuM8VPwg/viewform" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">こちら</a>、またはメールでご連絡ください。</p>
   <div class="cta-contact">
     <div class="cta-item">
       <span class="label">メール</span>
@@ -877,7 +885,7 @@ AIに興味はあるけれど、何から始めればよいかわからない。
     </div>
   </div>
   <div class="hero-btns" style="justify-content:center;">
-    <a href="mailto:exel1726e@gmail.com" class="btn-primary">✉ メールで無料相談する</a>
+    <a href="mailto:exel1726e@gmail.com" class="btn-primary">✉ メールで相談する</a>
   </div>
 </section>
 
@@ -892,7 +900,7 @@ AIに興味はあるけれど、何から始めればよいかわからない。
 
 <!-- スマホ用 追従フッターバー -->
 <div class="mobile-bar">
-  <a href="mailto:exel1726e@gmail.com" class="bar-call">✉ メールで無料相談</a>
+  <a href="#cta" class="bar-call">✉ 無料相談フォーム</a>
 </div>
 
 </body>
