@@ -38,6 +38,86 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "相談は本当に無料ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、最初の30分の無料相談は費用がかかりません。無理にAI導入をおすすめすることはなく、御社の状況に合わせて一緒に考えます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "費用はいくらからですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "導入費用（初期一括）は、日報デジタル化のスターターで10万円〜（30名程度まで）、日報から売上集計まで一気通貫のフルパックで45万円〜（30名程度まで）です。表示はすべて税込で、従業員数やご要望を伺ったうえで、契約申込み前に正式な税込金額を見積書または電子メールでお知らせします。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "導入後の月額サポートでは何をしてもらえますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI業務改善・伴走サポート（月額30,000円・税込）では、月1回のオンライン相談（60分）、メールでの相談対応、毎月の業務改善アドバイス、AI活用方法のご提案、基本的な操作サポートを行います。現地訪問・システムの追加開発・外部ツール利用料は別途お見積もりです。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "相談から稼働まで、どれくらいかかりますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "無料相談から稼働まで最短1か月が目安です。無料相談、業務ヒアリング、設計・お見積もり、構築・テスト、研修・稼働、定着サポートの順に進めます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ITやAIに詳しくなくても大丈夫ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "大丈夫です。導入時に現場スタッフの方への操作説明（研修）を行い、稼働後もサポートでフォローします。専門用語を使わず、わかりやすくご説明します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "どんな業種・規模の会社が対象ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "宮崎県の中小企業を対象に、警備会社・運輸会社の日報作成、勤務時間集計、給与計算、請求書作成、売上集計の自動化を中心に支援しています。料金は30名程度までの小規模と、30〜100名程度の中規模に分けています。上記以外の業種や業務も、まずはお気軽にご相談ください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "対応エリアはどこですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "宮崎県内（都城市・宮崎市など）を対象としています。ご相談はオンラインでも承ります。現地訪問が必要な場合は、別途お見積もりとなります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "相談の申し込み方法を教えてください。",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "このページ下部の無料相談フォーム、またはメール（exel1726e@gmail.com）からご連絡ください。内容を確認のうえ、折り返しご連絡します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "社内の情報やデータはどう扱われますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "お預かりした情報は、プライバシーポリシーに基づいて取り扱います。マイナンバー、口座の暗証情報、パスワード、健康情報などの機微な情報は、メール等で送信しないようお願いしています。"
+        }
+      }
+    ]
+  }
+  </script>
   <style>
     :root {
       --brand: #1f7a53;
@@ -307,6 +387,16 @@
       .mobile-bar .bar-call { background: var(--brand); }
       .mobile-bar .bar-line { background: #06C755; }
     }
+    /* FAQ */
+    .faq { padding: 80px 5%; background: #fff; }
+    .faq-list { max-width: 800px; margin: 0 auto; display: grid; gap: 12px; }
+    .faq-item { background: var(--gray); border-radius: 12px; border-left: 4px solid var(--brand); }
+    .faq-item summary { cursor: pointer; padding: 18px 48px 18px 20px; font-weight: 700; font-size: 16px; color: var(--dark); list-style: none; position: relative; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 22px; color: var(--brand); }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p { padding: 0 20px 18px; font-size: 15px; color: var(--text); }
+
   </style>
 </head>
 <body>
@@ -319,6 +409,7 @@
     <a href="#solution">自動化の流れ</a>
     <a href="#philosophy">理念</a>
     <a href="#pricing">料金</a>
+    <a href="#faq">よくある質問</a>
     <a href="blog/index.html">ブログ</a>
     <a href="#profile">プロフィール</a>
   </div>
@@ -856,6 +947,23 @@ AI活用と業務改善で、毎日の仕事をもっとラクに。<br>
       <div class="flow-title">定着サポート</div>
       <div class="flow-desc">月次訪問・改善・フォローアップ継続</div>
     </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="section-label">FAQ</div>
+  <h2 class="section-title">よくある<span>ご質問</span></h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>相談は本当に無料ですか？</summary><p>はい、最初の30分の無料相談は費用がかかりません。無理にAI導入をおすすめすることはなく、御社の状況に合わせて一緒に考えます。</p></details>
+    <details class="faq-item"><summary>費用はいくらからですか？</summary><p>導入費用（初期一括）は、日報デジタル化のスターターで10万円〜（30名程度まで）、日報から売上集計まで一気通貫のフルパックで45万円〜（30名程度まで）です。表示はすべて税込で、従業員数やご要望を伺ったうえで、契約申込み前に正式な税込金額を見積書または電子メールでお知らせします。</p></details>
+    <details class="faq-item"><summary>導入後の月額サポートでは何をしてもらえますか？</summary><p>AI業務改善・伴走サポート（月額30,000円・税込）では、月1回のオンライン相談（60分）、メールでの相談対応、毎月の業務改善アドバイス、AI活用方法のご提案、基本的な操作サポートを行います。現地訪問・システムの追加開発・外部ツール利用料は別途お見積もりです。</p></details>
+    <details class="faq-item"><summary>相談から稼働まで、どれくらいかかりますか？</summary><p>無料相談から稼働まで最短1か月が目安です。無料相談、業務ヒアリング、設計・お見積もり、構築・テスト、研修・稼働、定着サポートの順に進めます。</p></details>
+    <details class="faq-item"><summary>ITやAIに詳しくなくても大丈夫ですか？</summary><p>大丈夫です。導入時に現場スタッフの方への操作説明（研修）を行い、稼働後もサポートでフォローします。専門用語を使わず、わかりやすくご説明します。</p></details>
+    <details class="faq-item"><summary>どんな業種・規模の会社が対象ですか？</summary><p>宮崎県の中小企業を対象に、警備会社・運輸会社の日報作成、勤務時間集計、給与計算、請求書作成、売上集計の自動化を中心に支援しています。料金は30名程度までの小規模と、30〜100名程度の中規模に分けています。上記以外の業種や業務も、まずはお気軽にご相談ください。</p></details>
+    <details class="faq-item"><summary>対応エリアはどこですか？</summary><p>宮崎県内（都城市・宮崎市など）を対象としています。ご相談はオンラインでも承ります。現地訪問が必要な場合は、別途お見積もりとなります。</p></details>
+    <details class="faq-item"><summary>相談の申し込み方法を教えてください。</summary><p>このページ下部の無料相談フォーム、またはメール（exel1726e@gmail.com）からご連絡ください。内容を確認のうえ、折り返しご連絡します。</p></details>
+    <details class="faq-item"><summary>社内の情報やデータはどう扱われますか？</summary><p>お預かりした情報は、プライバシーポリシーに基づいて取り扱います。マイナンバー、口座の暗証情報、パスワード、健康情報などの機微な情報は、メール等で送信しないようお願いしています。</p></details>
   </div>
 </section>
 
